@@ -1,1 +1,10 @@
-hello
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  tasks:
+
+  - name: Test File
+    file: path=/home/jbacon/Documents/test123 state=touch
